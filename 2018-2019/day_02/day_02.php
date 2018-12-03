@@ -37,13 +37,11 @@ echo "Part 1 soluce: " . $checksum . PHP_EOL;
 // Part 2
 foreach ($inputs as $key1 => $word1) {
 	$word1 = str_split(trim($word1));
-
     for ($key2 = $key1+1; $key2 < count($inputs); $key2++) {
         if ($key1 == $key2) continue;
-
+        
 		$word2 = str_split(trim($inputs[$key2]));
         $nbDifferentLetter = $iLetter = 0;
-
 		for ($i = 0; $i < count($word1); $i++) {
 			$letter1 = $word1[$i];
             $letter2 = $word2[$i];
